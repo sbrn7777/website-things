@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     body { background-color: #383838;
+     }
+
+     section {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          margin-top: 100px;
+     }
+
+     ul {
+          display: flex;
+          list-style: none;
+     }
+     ul li {
+          padding: 10px 15px;
+          margin: 0 10px;
+     }
+
+     ul li::before,
+     ul li::after {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 2px;
+          background-color: #fff;
+          transition: 0.3s all ease-in-out;
+     }
+   
+     ul li::before{
+          top: 0;
+          left: 0;
+     }
+
+     ul li::after {
+          bottom: 0;
+          right: 0;
+     }
+
+     ul li:hover::before {
+          right: 0;
+          left: auto;
+          width: 100%;
+          background-color: #f39c12;
+     }
+
+     ul li:hover::after {
+          right: auto;
+          left: 0;
+          width: 100%;
+          background-color: #f39c12;
+     }
+
+     ul li a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #fff;
+          font-size: 20px;
+          transition: 0.3s all ease-in-out ;
+     }
+
+     ul li:hover a {
+          color: #f39c12;
+     } 
+
+</style>
+</head>
+<body>
+     <section>
+        <ul>
+             <li><a href="">Home</a></li>
+             
+             <li><a href="">Home</a></li>
+             
+             <li><a href="">Home</a></li>
+             
+             <li><a href="">Home</a></li>
+        </ul>
+
+     </section>
+     
+</body>
+</html>

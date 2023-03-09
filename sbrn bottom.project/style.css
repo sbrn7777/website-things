@@ -1,0 +1,37 @@
+button {
+    --h: 1.2em; /* the height */
+    --c: #1095c1; /* the color*/
+
+    line-height: var(--h);
+    color: #0000;
+    text-shadow: 0 calc(-1 * var(--_t, 0em)) #000, 0 calc(var(--h) - var(--_t, 0em)) var(--c);
+    border: 0.1em solid #000;
+    overflow: hidden;
+    background: none;
+    outline-offset: 0.1em;
+    transition: 0.3s;
+}
+button:hover {
+    --_t: var(--h);
+    border-color: var(--c);
+}
+button:active {
+    background-color: var(--c);
+    border-color: var(--c);
+    color: #fff;
+    transition: 0s;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+}
+button {
+    font-family: system-ui, sans-serif;
+    font-size: 3.5rem;
+    cursor: pointer;
+    padding: 0 0.5em;
+    font-weight: bold;
+}
